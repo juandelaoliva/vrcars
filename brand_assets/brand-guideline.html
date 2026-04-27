@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>VR Cars - Brand Guidelines</title>
+    <style>
+        :root {
+            --obsidian: #0a0a0a;
+            --redline: #d90429;
+            --asphalt: #1f1f1f;
+            --smoke: #e5e5e5;
+            --silver: #8d99ae;
+        }
+        body {
+            background-color: var(--obsidian);
+            color: var(--smoke);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 40px;
+        }
+        .board {
+            max-width: 1000px;
+            margin: 0 auto;
+            border: 1px solid var(--asphalt);
+            padding: 40px;
+            background: linear-gradient(145deg, #0f0f0f, #050505);
+        }
+        header {
+            border-bottom: 2px solid var(--redline);
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        h1 {
+            font-family: 'Exo 2', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin: 0;
+            color: var(--smoke);
+        }
+        .tagline { color: var(--redline); font-weight: bold; }
+        
+        .section { margin-bottom: 50px; }
+        .section-title {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: var(--silver);
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        /* Paleta de colores */
+        .palette { display: flex; gap: 15px; }
+        .color-card { flex: 1; text-align: center; }
+        .swatch {
+            height: 100px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .hex { font-family: monospace; font-size: 0.9rem; color: var(--silver); }
+
+        /* Tipografía */
+        .typo-box { background: var(--asphalt); padding: 20px; border-radius: 4px; }
+        .font-main { font-size: 2rem; font-family: 'Exo 2', sans-serif; margin-bottom: 10px; }
+        .font-body { font-size: 1.2rem; font-family: 'Inter', sans-serif; opacity: 0.7; }
+
+        /* Reglas de Imagen */
+        .img-rules { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .rule { border-left: 3px solid var(--redline); padding-left: 15px; }
+    </style>
+</head>
+<body>
+    <div class="board">
+        <header>
+            <h1>VR CARS</h1>
+            <span class="tagline">BRAND GUIDELINES V1.0</span>
+        </header>
+
+        <div class="section">
+            <span class="section-title">01. Concepto de Marca</span>
+            <p style="font-size: 1.5rem; font-style: italic;">"Exclusividad, Audacia y Precisión Alemana."</p>
+            <p>El Broker experto que domina el mercado de importación con autoridad y transparencia total.</p>
+        </div>
+
+        <div class="section">
+            <span class="section-title">02. Paleta de Colores</span>
+            <div class="palette">
+                <div class="color-card">
+                    <div class="swatch" style="background-color: #0a0a0a;"></div>
+                    <div class="hex">#0A0A0A</div>
+                    <small>Obsidian Black</small>
+                </div>
+                <div class="color-card">
+                    <div class="swatch" style="background-color: #d90429;"></div>
+                    <div class="hex">#D90429</div>
+                    <small>Redline</small>
+                </div>
+                <div class="color-card">
+                    <div class="swatch" style="background-color: #1f1f1f;"></div>
+                    <div class="hex">#1F1F1F</div>
+                    <small>Asphalt Grey</small>
+                </div>
+                <div class="color-card">
+                    <div class="swatch" style="background-color: #e5e5e5;"></div>
+                    <div class="hex">#E5E5E5</div>
+                    <small>Smoke White</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <span class="section-title">03. Tipografía Web</span>
+            <div class="typo-box">
+                <div class="font-main">Exo 2 - Títulos (Bold)</div>
+                <div class="font-body">Inter - Cuerpo de texto (Regular)</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <span class="section-title">04. Estilo Visual</span>
+            <div class="img-rules">
+                <div class="rule">
+                    <strong>Fotografía:</strong> Alto contraste, sombras profundas, iluminación tipo "Dark Mode".
+                </div>
+                <div class="rule">
+                    <strong>Iconografía:</strong> Lineal, minimalista y de trazo fino (estilo metálico).
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
