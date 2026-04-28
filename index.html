@@ -116,6 +116,34 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- ─── GOOGLE ANALYTICS 4 + CONSENT MODE v2 ────── -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X4Y4PLN83N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    // Default everything to denied — Consent Mode v2.
+    // GA still receives anonymous modeled data; no cookies until user consents.
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied',
+      'wait_for_update': 500
+    });
+
+    // Apply stored consent (if any) before config fires
+    try {
+      if (localStorage.getItem('vrcars_consent_v1') === 'granted') {
+        gtag('consent', 'update', { 'analytics_storage': 'granted' });
+      }
+    } catch (e) {}
+
+    gtag('config', 'G-X4Y4PLN83N');
+  </script>
+
   <style>
     :root {
       --obsidian: #0a0a0a;
@@ -996,6 +1024,58 @@
       .float-tooltip { display: none; }
     }
 
+    /* === COOKIE BANNER === */
+    .cookie-banner {
+      position: fixed;
+      left: 50%; bottom: 26px;
+      transform: translateX(-50%) translateY(0);
+      width: calc(100% - 52px);
+      max-width: 720px;
+      z-index: 1500;
+      background: rgba(12,12,12,0.97);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-left: 2px solid var(--redline);
+      padding: 22px 26px;
+      display: flex; gap: 24px; align-items: center;
+      clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+      box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+      animation: cookie-slide-up 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.8s both;
+    }
+    .cookie-banner[hidden] { display: none; }
+    .cookie-text { flex: 1; min-width: 0; }
+    .cookie-text strong {
+      display: block; font-family: 'Exo 2', sans-serif; font-weight: 700;
+      font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.14em;
+      color: var(--smoke); margin-bottom: 6px;
+    }
+    .cookie-text p {
+      font-size: 0.82rem; line-height: 1.55; color: var(--silver);
+    }
+    .cookie-text a { color: var(--smoke); text-decoration: underline; text-decoration-color: rgba(255,255,255,0.25); }
+    .cookie-text a:hover { text-decoration-color: var(--redline); }
+    .cookie-actions { display: flex; gap: 10px; flex-shrink: 0; }
+    .cookie-actions .btn-primary,
+    .cookie-actions .btn-ghost {
+      padding: 11px 22px; font-size: 0.72rem;
+    }
+    @keyframes cookie-slide-up {
+      from { opacity: 0; transform: translateX(-50%) translateY(30px); }
+      to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+    }
+    body.cookie-banner-visible .float-stack { opacity: 0; pointer-events: none; }
+
+    @media (max-width: 720px) {
+      .cookie-banner {
+        flex-direction: column; align-items: stretch;
+        gap: 14px; padding: 18px 20px;
+        bottom: 14px;
+        width: calc(100% - 28px);
+      }
+      .cookie-actions { gap: 8px; }
+      .cookie-actions .btn-primary,
+      .cookie-actions .btn-ghost { flex: 1; justify-content: center; }
+    }
+
     /* === SCROLL REVEAL === */
     .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1); }
     .reveal.visible { opacity: 1; transform: translateY(0); }
@@ -1651,9 +1731,9 @@
         Web diseñada y creada por <a href="https://juandelaoliva.com/" target="_blank" rel="noopener">Juan de la Oliva</a>
       </div>
       <div class="footer-legal">
-        <a href="#">Privacidad</a>
-        <a href="#">Aviso Legal</a>
-        <a href="#">Cookies</a>
+        <a href="privacidad.html">Privacidad</a>
+        <a href="aviso-legal.html">Aviso Legal</a>
+        <a href="cookies.html">Cookies</a>
       </div>
     </div>
   </div>
@@ -1669,6 +1749,18 @@
     <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     <span class="float-tooltip">Escríbenos por WhatsApp</span>
   </a>
+</div>
+
+<!-- ===== COOKIE BANNER ===== -->
+<div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Consentimiento de cookies" hidden>
+  <div class="cookie-text">
+    <strong>🍪 Cookies</strong>
+    <p>Usamos Google Analytics para entender cómo se navega en la web y mejorarla. No utilizamos cookies publicitarias. <a href="cookies.html">Más info</a>.</p>
+  </div>
+  <div class="cookie-actions">
+    <button type="button" class="btn-ghost" id="cookie-reject">Rechazar</button>
+    <button type="button" class="btn-primary" id="cookie-accept">Aceptar</button>
+  </div>
 </div>
 
 <script>
@@ -1751,9 +1843,135 @@
 
       const phone = form.dataset.whatsapp || '34678696699';
       const url = `https://wa.me/${phone}?text=${encodeURIComponent(lines.join('\n'))}`;
+
+      // ── Analytics: form submit + WhatsApp click (form source)
+      track('form_submit', {
+        coche: v('coche') || undefined,
+        has_phone: !!v('telefono'),
+        has_budget: !!v('presupuesto'),
+        has_details: !!v('detalles')
+      });
+      track('whatsapp_click', { source: 'form', coche: v('coche') || undefined });
+
       window.open(url, '_blank');
     });
   }
+
+  // ====================================================
+  // ── ANALYTICS EVENT TRACKING ────────────────────────
+  // ====================================================
+  function track(name, params) {
+    if (typeof gtag === 'function') {
+      gtag('event', name, params || {});
+    }
+  }
+
+  // ====================================================
+  // ── COOKIE CONSENT BANNER ───────────────────────────
+  // ====================================================
+  const COOKIE_KEY = 'vrcars_consent_v1';
+  const cookieBanner = document.getElementById('cookie-banner');
+
+  function setConsent(granted) {
+    try { localStorage.setItem(COOKIE_KEY, granted ? 'granted' : 'denied'); } catch (e) {}
+    if (typeof gtag === 'function') {
+      gtag('consent', 'update', {
+        'analytics_storage': granted ? 'granted' : 'denied'
+      });
+    }
+  }
+  function showBanner() {
+    if (!cookieBanner) return;
+    cookieBanner.hidden = false;
+    document.body.classList.add('cookie-banner-visible');
+  }
+  function hideBanner() {
+    if (!cookieBanner) return;
+    cookieBanner.hidden = true;
+    document.body.classList.remove('cookie-banner-visible');
+  }
+
+  let storedConsent = null;
+  try { storedConsent = localStorage.getItem(COOKIE_KEY); } catch (e) {}
+  if (!storedConsent) showBanner();
+
+  document.getElementById('cookie-accept')?.addEventListener('click', () => {
+    setConsent(true);
+    hideBanner();
+    track('cookie_consent', { decision: 'accepted' });
+  });
+  document.getElementById('cookie-reject')?.addEventListener('click', () => {
+    setConsent(false);
+    hideBanner();
+  });
+
+  // Tier 1 — Floating WhatsApp / Instagram
+  document.querySelector('.float-btn--wa')?.addEventListener('click', () => {
+    track('whatsapp_click', { source: 'float' });
+  });
+  document.querySelector('.float-btn--ig')?.addEventListener('click', () => {
+    track('instagram_click', { source: 'float' });
+  });
+
+  // Tier 1 — Hero social links (Instagram + WhatsApp)
+  document.querySelectorAll('.hero-social-link').forEach(el => {
+    const isWa = el.href.includes('wa.me');
+    el.addEventListener('click', () => {
+      track(isWa ? 'whatsapp_click' : 'instagram_click', { source: 'hero' });
+    });
+  });
+
+  // Tier 1 — Available car cards (each one is a high-intent WA conversion)
+  document.querySelectorAll('.car-card--available').forEach(card => {
+    card.addEventListener('click', () => {
+      const car_name = card.querySelector('.car-name')?.textContent.trim() || '';
+      const brandText = card.querySelector('.car-brand-badge')?.textContent || '';
+      const car_brand = brandText.split('·')[0].trim();
+      track('whatsapp_click', {
+        source: 'car_card',
+        car_name: car_name,
+        car_brand: car_brand
+      });
+    });
+  });
+
+  // Tier 1 — Catalog "Ver Más en Instagram" + Showcase IG CTA
+  document.querySelectorAll('a[href*="instagram.com/vrcars.oficial"]').forEach(el => {
+    if (el.classList.contains('hero-social-link') || el.classList.contains('float-btn--ig')) return;
+    el.addEventListener('click', () => {
+      let source = 'other';
+      if (el.closest('#catalog')) source = 'catalog_button';
+      else if (el.closest('#showcase')) source = 'showcase_cta';
+      else if (el.closest('footer')) source = 'footer';
+      track('instagram_click', { source });
+    });
+  });
+
+  // Tier 1 — Footer WhatsApp icon
+  document.querySelector('footer a[href*="wa.me"]')?.addEventListener('click', () => {
+    track('whatsapp_click', { source: 'footer' });
+  });
+
+  // Tier 1 — Email mailto: clicks
+  document.querySelectorAll('a[href^="mailto:"]').forEach(el => {
+    el.addEventListener('click', () => {
+      track('email_click', { source: el.closest('footer') ? 'footer' : 'other' });
+    });
+  });
+
+  // Tier 2 — Section views (one event per section, fires once)
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && entry.intersectionRatio >= 0.3) {
+        track('section_view', { section_id: entry.target.id });
+        sectionObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  ['process','why','catalog','showcase','testimonials','cta'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) sectionObserver.observe(el);
+  });
 </script>
 
 </body>

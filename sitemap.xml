@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://juandelaoliva.github.io/vrcars/</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://juandelaoliva.github.io/vrcars/brand_assets/og-image.jpg</image:loc>
+      <image:title>VR Cars — El coche que buscas</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://juandelaoliva.github.io/vrcars/brand_assets/bmw 1.jpeg</image:loc>
+      <image:title>BMW Serie 1 — Disponible</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://juandelaoliva.github.io/vrcars/brand_assets/mercedes.png</image:loc>
+      <image:title>Mercedes Clase C Coupé 220 — Disponible</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://juandelaoliva.github.io/vrcars/privacidad.html</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://juandelaoliva.github.io/vrcars/aviso-legal.html</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://juandelaoliva.github.io/vrcars/cookies.html</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+</urlset>

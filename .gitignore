@@ -1,0 +1,17 @@
+# OS / editor
+.DS_Store
+**/.DS_Store
+.vscode/
+.idea/
+*.swp
+
+# AI tooling local state
+.claude/
+
+# Local dev iterations (not for production)
+temporary screenshots/
+serve.mjs
+CLAUDE.md
+
+# Big legacy/reference files not used by the live site
+brand_assets/first-web.png
