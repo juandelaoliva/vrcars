@@ -3,4 +3,4 @@ Allow: /
 Disallow: /temporary screenshots/
 Disallow: /serve.mjs
 
-Sitemap: https://juandelaoliva.github.io/vrcars/sitemap.xml
+Sitemap: https://vrcarsoficial.com/sitemap.xml
