@@ -786,9 +786,10 @@
     .showcase-grid {
       display: grid;
       grid-template-columns: 1.35fr 1fr 0.85fr;
+      grid-template-rows: 640px;
       gap: 14px;
-      height: 640px;
     }
+    .showcase-grid > * { min-height: 0; min-width: 0; }
     .showcase-hero, .showcase-video, .thumb {
       position: relative;
       overflow: hidden;
@@ -796,7 +797,7 @@
       clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px));
     }
     .showcase-hero img, .thumb img, .showcase-video video {
-      width: 100%; height: 100%; object-fit: cover;
+      width: 100%; height: 100%; object-fit: cover; display: block;
       transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
     .showcase-hero:hover img, .thumb:hover img { transform: scale(1.04); }
@@ -849,6 +850,7 @@
       background: rgba(10,10,10,0.7);
       backdrop-filter: blur(8px);
       pointer-events: none;
+      display: none;
     }
 
     .showcase-cta {
@@ -865,7 +867,7 @@
     .showcase-cta-text strong { color: var(--redline); font-weight: 700; }
 
     @media (max-width: 1024px) {
-      .showcase-grid { grid-template-columns: 1fr 1fr; height: auto; }
+      .showcase-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
       .showcase-hero, .showcase-video { aspect-ratio: 3/4; }
       .showcase-video { grid-column: 1 / -1; aspect-ratio: 16/9; }
     }
@@ -1106,7 +1108,7 @@
   </ul>
   <a href="#cta" class="btn-primary nav-cta" style="font-size:0.72rem;padding:11px 24px;">
     <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-    Solicitar Búsqueda
+    Solicitar Presupuesto
   </a>
   <button class="nav-burger" id="nav-burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
     <span></span><span></span><span></span>
@@ -1142,7 +1144,7 @@
     <div class="hero-ctas">
       <a href="#cta" class="btn-primary">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-        Solicitar Búsqueda
+        Solicitar Presupuesto
       </a>
       <a href="#catalog" class="btn-ghost">
         Ver Catálogo
@@ -1332,7 +1334,7 @@
       <!-- Mercedes Clase C Coupé 220 (Disponible · Nacional) -->
       <a class="car-card car-card--available reveal" style="transition-delay:0.05s" href="https://wa.me/34678696699?text=Hola%20Victor%2C%20me%20interesa%20el%20Mercedes%20Clase%20C%20Coup%C3%A9%20220%20(170CV%2C%202016)%20que%20ten%C3%A9is%20disponible.%20%C2%BFPodemos%20hablar%3F" target="_blank" rel="noopener">
         <div class="car-img-box">
-          <img class="car-thumb" src="brand_assets/mercedes.png" alt="Mercedes Clase C Coupé 220 disponible" style="object-position: center 50%;">
+          <img class="car-thumb" src="brand_assets/mercedes.png" alt="Mercedes Clase C Coupé 220 disponible" style="object-position: center 66%;">
           <div class="car-overlay"></div>
           <div class="car-badge">Disponible</div>
         </div>
@@ -1356,7 +1358,7 @@
       <!-- Mini Cooper S -->
       <div class="car-card reveal" style="transition-delay:0.1s">
         <div class="car-img-box">
-          <img class="car-thumb" src="brand_assets/mini-cooper-s-vendido.webp" alt="Mini Cooper S vendido" style="object-position: center 55%;">
+          <img class="car-thumb" src="brand_assets/mini-thumbnail.jpg" alt="Mini Cooper S vendido">
           <div class="car-overlay"></div>
           <div class="car-badge" style="background:var(--asphalt);color:var(--silver);border:1px solid rgba(141,153,174,0.3);">Vendido</div>
         </div>
@@ -1376,7 +1378,7 @@
       <!-- Audi A3 Limousine -->
       <div class="car-card reveal" style="transition-delay:0.2s">
         <div class="car-img-box">
-          <img class="car-thumb" src="brand_assets/audi-vendido.webp" alt="Audi A3 Limousine vendido" style="object-position: center 60%;">
+          <img class="car-thumb" src="brand_assets/audi-thumbnail.jpg" alt="Audi A3 Limousine vendido">
           <div class="car-overlay"></div>
           <div class="car-badge" style="background:var(--asphalt);color:var(--silver);border:1px solid rgba(141,153,174,0.3);">Vendido</div>
         </div>
@@ -1396,7 +1398,7 @@
       <!-- Nissan Qashqai -->
       <div class="car-card reveal" style="transition-delay:0.3s">
         <div class="car-img-box">
-          <img class="car-thumb" src="brand_assets/Nissan.png" alt="Nissan Qashqai vendido" style="object-position: center 65%;">
+          <img class="car-thumb" src="brand_assets/nissan-2.jpg" alt="Nissan Qashqai vendido" style="object-position: center 51%;">
           <div class="car-overlay"></div>
           <div class="car-badge" style="background:var(--asphalt);color:var(--silver);border:1px solid rgba(141,153,174,0.3);">Vendido</div>
         </div>
@@ -1442,7 +1444,7 @@
         <div class="thumb reveal" style="transition-delay:0.16s"><img src="brand_assets/bmw 7.jpeg" alt="Interior del BMW"></div>
       </div>
       <div class="showcase-video reveal" style="transition-delay:0.24s">
-        <video preload="metadata" controls muted playsinline poster="brand_assets/bmw 9.jpeg">
+        <video id="showcase-video-el" preload="metadata" controls playsinline poster="brand_assets/bmw 9.jpeg">
           <source src="brand_assets/FINAL%20VICTOR%20BMW.mp4" type="video/mp4">
         </video>
         <span class="video-label">Presentación</span>
