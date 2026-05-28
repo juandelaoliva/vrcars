@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://vrcarsoficial.com/</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -18,22 +18,26 @@
       <image:loc>https://vrcarsoficial.com/brand_assets/mercedes.png</image:loc>
       <image:title>Mercedes Clase C Coupé 220 — Disponible</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://vrcarsoficial.com/brand_assets/audi%20spain.png</image:loc>
+      <image:title>Audi A5 Black Line 40 TFSI S tronic — Disponible</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://vrcarsoficial.com/privacidad.html</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://vrcarsoficial.com/aviso-legal.html</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://vrcarsoficial.com/cookies.html</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
