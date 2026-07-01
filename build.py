@@ -145,10 +145,16 @@ def build():
         f"    .cars-grid {{ display: grid; gap: 16px; }}\n"
         f"    .available-grid {{ display: grid; grid-template-columns: repeat({a_cols}, 1fr); gap: 16px; }}\n"
         f"    .sold-grid {{ display: grid; grid-template-columns: repeat({s_cols}, 1fr); gap: 16px; margin-top: 16px; }}\n"
-        f"    .cars-grid > .car-card--available .car-img-box {{ height: 240px; }}"
+        f"    .cars-grid > .car-card--available .car-img-box {{ height: 240px; }}\n"
+        f"    @media (max-width: 900px) {{\n"
+        f"      .available-grid, .sold-grid {{ grid-template-columns: repeat(2, 1fr) !important; }}\n"
+        f"    }}\n"
+        f"    @media (max-width: 580px) {{\n"
+        f"      .available-grid, .sold-grid {{ grid-template-columns: 1fr !important; }}\n"
+        f"    }}"
     )
     html = re.sub(
-        r'\.cars-grid \{[^}]+\}.*?\.cars-grid > \.car-card--available \.car-img-box \{[^}]+\}',
+        r'\.cars-grid \{[^}]+\}.*?\.cars-grid > \.car-card--available \.car-img-box \{[^}]+\}.*?(?=\n    \.car-card\b|\n    @media[^(]|\Z)',
         new_css,
         html, flags=re.DOTALL
     )
