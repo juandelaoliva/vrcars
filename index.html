@@ -589,10 +589,16 @@
 
     .catalog-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 48px; }
 
-                                .cars-grid { display: grid; gap: 16px; }
+                                    .cars-grid { display: grid; gap: 16px; }
     .available-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
     .sold-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 16px; }
     .cars-grid > .car-card--available .car-img-box { height: 240px; }
+    @media (max-width: 900px) {
+      .available-grid, .sold-grid { grid-template-columns: repeat(2, 1fr) !important; }
+    }
+    @media (max-width: 580px) {
+      .available-grid, .sold-grid { grid-template-columns: 1fr !important; }
+    }
     @media (max-width: 900px) {
       .available-grid, .sold-grid { grid-template-columns: repeat(2, 1fr) !important; }
     }
@@ -1186,10 +1192,16 @@
       .step-connector { display: none; }
       .why-layout { grid-template-columns: 1fr; gap: 40px; }
       .why-left .big-ghost { font-size: 5rem; }
-                                .cars-grid { display: grid; gap: 16px; }
+                                    .cars-grid { display: grid; gap: 16px; }
     .available-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
     .sold-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 16px; }
     .cars-grid > .car-card--available .car-img-box { height: 240px; }
+    @media (max-width: 900px) {
+      .available-grid, .sold-grid { grid-template-columns: repeat(2, 1fr) !important; }
+    }
+    @media (max-width: 580px) {
+      .available-grid, .sold-grid { grid-template-columns: 1fr !important; }
+    }
     @media (max-width: 900px) {
       .available-grid, .sold-grid { grid-template-columns: repeat(2, 1fr) !important; }
     }
@@ -1434,7 +1446,7 @@
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
     </div>
-                                            <div class="cars-grid">
+                                                <div class="cars-grid">
       <div class="available-grid">
       <a class="car-card car-card--available reveal" href="https://wa.me/34678696699?text=Hola%20Victor%2C%20me%20interesa%20el%20BMW%20Serie%201%20116i%20(1.5%20gasolina%2C%20109CV%2C%202018)%20que%20ten%C3%A9is%20disponible.%20%C2%BFPodemos%20hablar%3F" target="_blank" rel="noopener">
         <div class="car-img-box">
@@ -1446,7 +1458,7 @@
           <div class="car-brand-badge">BMW · Importado de Alemania</div>
           <div class="car-name">Serie 1 116i</div>
           <div class="car-specs">
-            <div class="spec"><span class="spec-v">1.5 Â· 109 CV</span><span class="spec-l">Motor</span></div>
+            <div class="spec"><span class="spec-v">1.5 ÃÂ· 109 CV</span><span class="spec-l">Motor</span></div>
             <div class="spec"><span class="spec-v">2018</span><span class="spec-l">Año</span></div>
             <div class="spec"><span class="spec-v">61.000 km</span><span class="spec-l">Kilometraje</span></div>
           </div>
@@ -1461,15 +1473,15 @@
       </a>
       <a class="car-card car-card--available reveal" style="transition-delay:0.05s" href="https://wa.me/34678696699?text=Hola%20Victor%2C%20me%20interesa%20el%20Mercedes%20Clase%20C%20Coup%C3%A9%20220%20(170CV%2C%202016)%20que%20ten%C3%A9is%20disponible.%20%C2%BFPodemos%20hablar%3F" target="_blank" rel="noopener">
         <div class="car-img-box">
-          <img class="car-thumb" src="brand_assets/mercedes.png" alt="Mercedes-Benz Clase C CoupÃ© 220" style="object-position: center 66%;">
+          <img class="car-thumb" src="brand_assets/mercedes.png" alt="Mercedes-Benz Clase C CoupÃÂ© 220" style="object-position: center 66%;">
           <div class="car-overlay"></div>
           <div class="car-badge">Disponible</div>
         </div>
         <div class="car-body">
           <div class="car-brand-badge">Mercedes-Benz · Vehículo Nacional</div>
-          <div class="car-name">Clase C CoupÃ© 220</div>
+          <div class="car-name">Clase C CoupÃÂ© 220</div>
           <div class="car-specs">
-            <div class="spec"><span class="spec-v">2.2 Â· 170 CV</span><span class="spec-l">Motor</span></div>
+            <div class="spec"><span class="spec-v">2.2 ÃÂ· 170 CV</span><span class="spec-l">Motor</span></div>
             <div class="spec"><span class="spec-v">2016</span><span class="spec-l">Año</span></div>
             <div class="spec"><span class="spec-v">152.000 km</span><span class="spec-l">Kilometraje</span></div>
           </div>
@@ -1492,7 +1504,7 @@
           <div class="car-brand-badge">Audi · Vehículo Nacional</div>
           <div class="car-name">A5 Black Line 40 TFSI S tronic</div>
           <div class="car-specs">
-            <div class="spec"><span class="spec-v">2.0 Â· 190 CV</span><span class="spec-l">Motor</span></div>
+            <div class="spec"><span class="spec-v">2.0 ÃÂ· 190 CV</span><span class="spec-l">Motor</span></div>
             <div class="spec"><span class="spec-v">2020</span><span class="spec-l">Año</span></div>
             <div class="spec"><span class="spec-v">160.000 km</span><span class="spec-l">Kilometraje</span></div>
           </div>
@@ -1517,7 +1529,7 @@
           <div class="car-brand-badge">Mini · Importado de Alemania</div>
           <div class="car-name">Cooper S</div>
           <div class="car-specs">
-            <div class="spec"><span class="spec-v">2.0 Â· 192 CV</span><span class="spec-l">Motor</span></div>
+            <div class="spec"><span class="spec-v">2.0 ÃÂ· 192 CV</span><span class="spec-l">Motor</span></div>
             <div class="spec"><span class="spec-v">2015</span><span class="spec-l">Año</span></div>
             <div class="spec"><span class="spec-v">120.000 km</span><span class="spec-l">Kilometraje</span></div>
           </div>
@@ -1536,7 +1548,7 @@
           <div class="car-brand-badge">Audi · Importado de Alemania</div>
           <div class="car-name">A3 Limousine</div>
           <div class="car-specs">
-            <div class="spec"><span class="spec-v">1.0 Â· 110 CV</span><span class="spec-l">Motor</span></div>
+            <div class="spec"><span class="spec-v">1.0 ÃÂ· 110 CV</span><span class="spec-l">Motor</span></div>
             <div class="spec"><span class="spec-v">2017</span><span class="spec-l">Año</span></div>
             <div class="spec"><span class="spec-v">77.000 km</span><span class="spec-l">Kilometraje</span></div>
           </div>
@@ -1555,7 +1567,7 @@
           <div class="car-brand-badge">Nissan · Importado de Alemania</div>
           <div class="car-name">Qashqai</div>
           <div class="car-specs">
-            <div class="spec"><span class="spec-v">1.5 dCi Â· 115 CV</span><span class="spec-l">Motor</span></div>
+            <div class="spec"><span class="spec-v">1.5 dCi ÃÂ· 115 CV</span><span class="spec-l">Motor</span></div>
             <div class="spec"><span class="spec-v">2016</span><span class="spec-l">Año</span></div>
             <div class="spec"><span class="spec-v">110.000 km</span><span class="spec-l">Kilometraje</span></div>
           </div>
@@ -1574,7 +1586,7 @@
           <div class="car-brand-badge">BMW · Importado de Alemania</div>
           <div class="car-name">X1 sDrive 18i</div>
           <div class="car-specs">
-            <div class="spec"><span class="spec-v">1.5 Â· 136 CV</span><span class="spec-l">Motor</span></div>
+            <div class="spec"><span class="spec-v">1.5 ÃÂ· 136 CV</span><span class="spec-l">Motor</span></div>
             <div class="spec"><span class="spec-v">2021</span><span class="spec-l">Año</span></div>
             <div class="spec"><span class="spec-v">42.000 km</span><span class="spec-l">Kilometraje</span></div>
           </div>
@@ -1585,15 +1597,15 @@
       </div>
       <div class="car-card reveal" style="transition-delay:0.32s">
         <div class="car-img-box">
-          <img class="car-thumb" src="brand_assets/Seat.jpg" alt="SEAT LeÃ³n FR vendido">
+          <img class="car-thumb" src="brand_assets/Seat.jpg" alt="SEAT LeÃÂ³n FR vendido">
           <div class="car-overlay"></div>
           <div class="car-badge" style="background:var(--asphalt);color:var(--silver);border:1px solid rgba(141,153,174,0.3);">Vendido</div>
         </div>
         <div class="car-body" style="opacity:0.65;">
           <div class="car-brand-badge">SEAT · Importado de Alemania</div>
-          <div class="car-name">LeÃ³n FR</div>
+          <div class="car-name">LeÃÂ³n FR</div>
           <div class="car-specs">
-            <div class="spec"><span class="spec-v">1.5 TSI Â· 150 CV</span><span class="spec-l">Motor</span></div>
+            <div class="spec"><span class="spec-v">1.5 TSI ÃÂ· 150 CV</span><span class="spec-l">Motor</span></div>
             <div class="spec"><span class="spec-v">2020</span><span class="spec-l">Año</span></div>
             <div class="spec"><span class="spec-v">134.000 km</span><span class="spec-l">Kilometraje</span></div>
           </div>
@@ -1612,7 +1624,7 @@
           <div class="car-brand-badge">Volkswagen · Importado de Alemania</div>
           <div class="car-name">Golf VII 2.0 TDI</div>
           <div class="car-specs">
-            <div class="spec"><span class="spec-v">2.0 TDI Â· 150 CV</span><span class="spec-l">Motor</span></div>
+            <div class="spec"><span class="spec-v">2.0 TDI ÃÂ· 150 CV</span><span class="spec-l">Motor</span></div>
             <div class="spec"><span class="spec-v">2015</span><span class="spec-l">Año</span></div>
             <div class="spec"><span class="spec-v">101.000 km</span><span class="spec-l">Kilometraje</span></div>
           </div>
@@ -1623,17 +1635,17 @@
       </div>
       <div class="car-card reveal" style="transition-delay:0.48s">
         <div class="car-img-box">
-          <img class="car-thumb" src="brand_assets/test-arbol.jpg" alt="Test Árbol vendido" style="object-position: right bottom;">
+          <img class="car-thumb" src="brand_assets/test-arbol.jpg" alt="Test Ãrbol vendido" style="object-position: right bottom;">
           <div class="car-overlay"></div>
           <div class="car-badge" style="background:var(--asphalt);color:var(--silver);border:1px solid rgba(141,153,174,0.3);">Vendido</div>
         </div>
         <div class="car-body" style="opacity:0.65;">
           <div class="car-brand-badge">Test · Vehículo Nacional</div>
-          <div class="car-name">Árbol</div>
+          <div class="car-name">Ãrbol</div>
           <div class="car-specs">
             <div class="spec"><span class="spec-v">120</span><span class="spec-l">Motor</span></div>
             <div class="spec"><span class="spec-v">2028</span><span class="spec-l">Año</span></div>
-            <div class="spec"><span class="spec-v">100.000 km</span><span class="spec-l">Kilometraje</span></div>
+            <div class="spec"><span class="spec-v">2.000 km</span><span class="spec-l">Kilometraje</span></div>
           </div>
           <div class="car-footer">
             <span class="car-price" style="color:var(--silver);">Vendido</span>
