@@ -1,8 +1,32 @@
 # VR Cars
 
-A fully static car dealership website managed through a Telegram bot — no admin panel, no database, no server to maintain. Content is stored in a JSON file on GitHub; a bot lets the dealer add, edit, or remove cars from Telegram; a GitHub Action rebuilds the HTML automatically; GitHub Pages serves the result.
+Landing page for **VR Cars**, a small car dealership based in Spain that specialises in importing second-hand vehicles from Germany. The site showcases the current inventory — available cars with a direct WhatsApp contact button, and a sold section showing past vehicles — along with the dealer's process, value proposition, and legal pages.
 
 **Live site:** https://vrcarsoficial.com
+
+### What the site does
+
+- Displays available cars as clickable cards that open a pre-filled WhatsApp conversation with the dealer
+- Shows sold vehicles as a reference section
+- Auto-updates stats (total imported, sold, available now) from the car data
+- Fully responsive — mobile-first design
+- No cookies required for core functionality; GDPR-compliant legal pages included
+
+### How content is managed
+
+There is no admin panel. The dealer manages the inventory from their phone via a private **Telegram bot**:
+
+- `/addcar` — walks through a guided conversation (brand, model, engine, fuel, year, km, status, origin, photo, image crop position), generates a live preview, then publishes to the site with one tap
+- `/editcar` — edit any field of any existing car
+- `/deletecar` — remove a car from the catalog
+
+Publishing a car takes about 5 minutes end-to-end: the bot commits the data to GitHub, a GitHub Action rebuilds the HTML, and GitHub Pages deploys the updated static site.
+
+---
+
+## Technical documentation
+
+A fully static site managed through a Telegram bot — no admin panel, no database, no server to maintain. Content is stored in a JSON file on GitHub; the bot lets the dealer add, edit, or remove cars from Telegram; a GitHub Action rebuilds the HTML automatically; GitHub Pages serves the result.
 
 ---
 
