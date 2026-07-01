@@ -589,10 +589,16 @@
 
     .catalog-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 48px; }
 
-                        .cars-grid { display: grid; gap: 16px; }
+                            .cars-grid { display: grid; gap: 16px; }
     .available-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
     .sold-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px; }
     .cars-grid > .car-card--available .car-img-box { height: 240px; }
+    @media (max-width: 900px) {
+      .available-grid, .sold-grid { grid-template-columns: repeat(2, 1fr) !important; }
+    }
+    @media (max-width: 580px) {
+      .available-grid, .sold-grid { grid-template-columns: 1fr !important; }
+    }
     @media (max-width: 900px) {
       .available-grid, .sold-grid { grid-template-columns: repeat(2, 1fr) !important; }
     }
@@ -1174,10 +1180,16 @@
       .step-connector { display: none; }
       .why-layout { grid-template-columns: 1fr; gap: 40px; }
       .why-left .big-ghost { font-size: 5rem; }
-                        .cars-grid { display: grid; gap: 16px; }
+                            .cars-grid { display: grid; gap: 16px; }
     .available-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
     .sold-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px; }
     .cars-grid > .car-card--available .car-img-box { height: 240px; }
+    @media (max-width: 900px) {
+      .available-grid, .sold-grid { grid-template-columns: repeat(2, 1fr) !important; }
+    }
+    @media (max-width: 580px) {
+      .available-grid, .sold-grid { grid-template-columns: 1fr !important; }
+    }
     @media (max-width: 900px) {
       .available-grid, .sold-grid { grid-template-columns: repeat(2, 1fr) !important; }
     }
@@ -1410,7 +1422,7 @@
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
     </div>
-                                    <div class="cars-grid">
+                                        <div class="cars-grid">
       <div class="available-grid">
       <a class="car-card car-card--available reveal" href="https://wa.me/34678696699?text=Hola%20Victor%2C%20me%20interesa%20el%20BMW%20Serie%201%20116i%20(1.5%20gasolina%2C%20109CV%2C%202018)%20que%20ten%C3%A9is%20disponible.%20%C2%BFPodemos%20hablar%3F" target="_blank" rel="noopener">
         <div class="car-img-box">
