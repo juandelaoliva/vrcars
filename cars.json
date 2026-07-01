@@ -1,0 +1,113 @@
+[
+  {
+    "id": "bmw-serie1-116i",
+    "brand": "BMW",
+    "model": "Serie 1 116i",
+    "engine": "1.5 · 109 CV",
+    "year": "2018",
+    "km": "61.000 km",
+    "status": "available",
+    "origin": "germany",
+    "image": "brand_assets/bmw 1.jpeg",
+    "imagePosition": "55% 62%",
+    "whatsapp": "Hola%20Victor%2C%20me%20interesa%20el%20BMW%20Serie%201%20116i%20(1.5%20gasolina%2C%20109CV%2C%202018)%20que%20ten%C3%A9is%20disponible.%20%C2%BFPodemos%20hablar%3F"
+  },
+  {
+    "id": "mercedes-clase-c-220",
+    "brand": "Mercedes-Benz",
+    "model": "Clase C Coupé 220",
+    "engine": "2.2 · 170 CV",
+    "year": "2016",
+    "km": "152.000 km",
+    "status": "available",
+    "origin": "national",
+    "image": "brand_assets/mercedes.png",
+    "imagePosition": "center 66%",
+    "whatsapp": "Hola%20Victor%2C%20me%20interesa%20el%20Mercedes%20Clase%20C%20Coup%C3%A9%20220%20(170CV%2C%202016)%20que%20ten%C3%A9is%20disponible.%20%C2%BFPodemos%20hablar%3F"
+  },
+  {
+    "id": "audi-a5-blackline",
+    "brand": "Audi",
+    "model": "A5 Black Line 40 TFSI S tronic",
+    "engine": "2.0 · 190 CV",
+    "year": "2020",
+    "km": "160.000 km",
+    "status": "available",
+    "origin": "national",
+    "image": "brand_assets/audi spain.png",
+    "imagePosition": "center 50%",
+    "whatsapp": "Hola%20Victor%2C%20me%20interesa%20el%20Audi%20A5%20Black%20Line%2040%20TFSI%20S%20tronic%20(2.0%20gasolina%2C%20190CV%2C%202020)%20que%20ten%C3%A9is%20disponible.%20%C2%BFPodemos%20hablar%3F"
+  },
+  {
+    "id": "mini-cooper-s",
+    "brand": "Mini",
+    "model": "Cooper S",
+    "engine": "2.0 · 192 CV",
+    "year": "2015",
+    "km": "120.000 km",
+    "status": "sold",
+    "origin": "germany",
+    "image": "brand_assets/mini-thumbnail.jpg",
+    "imagePosition": "center 50%"
+  },
+  {
+    "id": "audi-a3-limousine",
+    "brand": "Audi",
+    "model": "A3 Limousine",
+    "engine": "1.0 · 110 CV",
+    "year": "2017",
+    "km": "77.000 km",
+    "status": "sold",
+    "origin": "germany",
+    "image": "brand_assets/audi-thumbnail.jpg",
+    "imagePosition": "center 50%"
+  },
+  {
+    "id": "nissan-qashqai",
+    "brand": "Nissan",
+    "model": "Qashqai",
+    "engine": "1.5 dCi · 115 CV",
+    "year": "2016",
+    "km": "110.000 km",
+    "status": "sold",
+    "origin": "germany",
+    "image": "brand_assets/nissan-2.jpg",
+    "imagePosition": "center 51%"
+  },
+  {
+    "id": "bmw-x1-sdrive18i",
+    "brand": "BMW",
+    "model": "X1 sDrive 18i",
+    "engine": "1.5 · 136 CV",
+    "year": "2021",
+    "km": "42.000 km",
+    "status": "sold",
+    "origin": "germany",
+    "image": "brand_assets/BMW X1.png",
+    "imagePosition": "center 50%"
+  },
+  {
+    "id": "seat-leon-fr",
+    "brand": "SEAT",
+    "model": "León FR",
+    "engine": "1.5 TSI · 150 CV",
+    "year": "2020",
+    "km": "134.000 km",
+    "status": "sold",
+    "origin": "germany",
+    "image": "brand_assets/Seat.jpg",
+    "imagePosition": "center 50%"
+  },
+  {
+    "id": "volkswagen-golf-vii",
+    "brand": "Volkswagen",
+    "model": "Golf VII 2.0 TDI",
+    "engine": "2.0 TDI · 150 CV",
+    "year": "2015",
+    "km": "101.000 km",
+    "status": "sold",
+    "origin": "germany",
+    "image": "brand_assets/Ww.jpg",
+    "imagePosition": "center 65%"
+  }
+]

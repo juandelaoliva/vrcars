@@ -589,9 +589,9 @@
 
     .catalog-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 48px; }
 
-    .cars-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; }
-    .cars-grid > .car-card--available { grid-column: span 4; }
-    .cars-grid > .car-card:not(.car-card--available) { grid-column: span 4; }
+            .cars-grid { display: grid; gap: 16px; }
+    .available-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .sold-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px; }
     .cars-grid > .car-card--available .car-img-box { height: 240px; }
     .car-card {
       background: var(--asphalt); overflow: hidden;
@@ -1138,10 +1138,10 @@
       .step-connector { display: none; }
       .why-layout { grid-template-columns: 1fr; gap: 40px; }
       .why-left .big-ghost { font-size: 5rem; }
-      .cars-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
-      .cars-grid > .car-card--available,
-      .cars-grid > .car-card:not(.car-card--available) { grid-column: auto; }
-      .cars-grid > .car-card--available .car-img-box { height: 235px; }
+              .cars-grid { display: grid; gap: 16px; }
+    .available-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .sold-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px; }
+    .cars-grid > .car-card--available .car-img-box { height: 240px; }
       .testi-grid { grid-template-columns: 1fr; }
       .proof-inner { grid-template-columns: repeat(2, 1fr); }
       .footer-top { grid-template-columns: 1fr 1fr; gap: 36px; }
@@ -1247,7 +1247,7 @@
         <div class="stat-lbl">Coches Importados</div>
       </div>
       <div>
-        <div class="stat-num">7</div>
+        <div class="stat-num">6</div>
         <div class="stat-lbl">Vendidos con Éxito</div>
       </div>
       <div>
@@ -1338,8 +1338,8 @@
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
     </div>
-    <div class="cars-grid">
-      <!-- BMW Serie 1 -->
+            <div class="cars-grid">
+      <div class="available-grid">
       <a class="car-card car-card--available reveal" href="https://wa.me/34678696699?text=Hola%20Victor%2C%20me%20interesa%20el%20BMW%20Serie%201%20116i%20(1.5%20gasolina%2C%20109CV%2C%202018)%20que%20ten%C3%A9is%20disponible.%20%C2%BFPodemos%20hablar%3F" target="_blank" rel="noopener">
         <div class="car-img-box">
           <img class="car-thumb" src="brand_assets/bmw 1.jpeg" alt="BMW Serie 1 116i" style="object-position: 55% 62%;">
@@ -1363,10 +1363,9 @@
           </div>
         </div>
       </a>
-      <!-- Mercedes Clase C Coupé 220 (Disponible · Nacional) -->
       <a class="car-card car-card--available reveal" style="transition-delay:0.05s" href="https://wa.me/34678696699?text=Hola%20Victor%2C%20me%20interesa%20el%20Mercedes%20Clase%20C%20Coup%C3%A9%20220%20(170CV%2C%202016)%20que%20ten%C3%A9is%20disponible.%20%C2%BFPodemos%20hablar%3F" target="_blank" rel="noopener">
         <div class="car-img-box">
-          <img class="car-thumb" src="brand_assets/mercedes.png" alt="Mercedes Clase C Coupé 220 disponible" style="object-position: center 66%;">
+          <img class="car-thumb" src="brand_assets/mercedes.png" alt="Mercedes-Benz Clase C Coupé 220" style="object-position: center 66%;">
           <div class="car-overlay"></div>
           <div class="car-badge">Disponible</div>
         </div>
@@ -1387,10 +1386,9 @@
           </div>
         </div>
       </a>
-      <!-- Audi A5 Black Line 40 TFSI S tronic (Disponible · Nacional) -->
-      <a class="car-card car-card--available reveal" style="transition-delay:0.08s" href="https://wa.me/34678696699?text=Hola%20Victor%2C%20me%20interesa%20el%20Audi%20A5%20Black%20Line%2040%20TFSI%20S%20tronic%20(2.0%20gasolina%2C%20190CV%2C%202020)%20que%20ten%C3%A9is%20disponible.%20%C2%BFPodemos%20hablar%3F" target="_blank" rel="noopener">
+      <a class="car-card car-card--available reveal" style="transition-delay:0.10s" href="https://wa.me/34678696699?text=Hola%20Victor%2C%20me%20interesa%20el%20Audi%20A5%20Black%20Line%2040%20TFSI%20S%20tronic%20(2.0%20gasolina%2C%20190CV%2C%202020)%20que%20ten%C3%A9is%20disponible.%20%C2%BFPodemos%20hablar%3F" target="_blank" rel="noopener">
         <div class="car-img-box">
-          <img class="car-thumb" src="brand_assets/audi spain.png" alt="Audi A5 Black Line 40 TFSI S tronic disponible">
+          <img class="car-thumb" src="brand_assets/audi spain.png" alt="Audi A5 Black Line 40 TFSI S tronic">
           <div class="car-overlay"></div>
           <div class="car-badge">Disponible</div>
         </div>
@@ -1411,8 +1409,9 @@
           </div>
         </div>
       </a>
-      <!-- Mini Cooper S -->
-      <div class="car-card reveal" style="transition-delay:0.1s">
+      </div>
+      <div class="sold-grid">
+      <div class="car-card reveal">
         <div class="car-img-box">
           <img class="car-thumb" src="brand_assets/mini-thumbnail.jpg" alt="Mini Cooper S vendido">
           <div class="car-overlay"></div>
@@ -1431,8 +1430,7 @@
           </div>
         </div>
       </div>
-      <!-- Audi A3 Limousine -->
-      <div class="car-card reveal" style="transition-delay:0.2s">
+      <div class="car-card reveal" style="transition-delay:0.08s">
         <div class="car-img-box">
           <img class="car-thumb" src="brand_assets/audi-thumbnail.jpg" alt="Audi A3 Limousine vendido">
           <div class="car-overlay"></div>
@@ -1451,8 +1449,7 @@
           </div>
         </div>
       </div>
-      <!-- Nissan Qashqai -->
-      <div class="car-card reveal" style="transition-delay:0.3s">
+      <div class="car-card reveal" style="transition-delay:0.16s">
         <div class="car-img-box">
           <img class="car-thumb" src="brand_assets/nissan-2.jpg" alt="Nissan Qashqai vendido" style="object-position: center 51%;">
           <div class="car-overlay"></div>
@@ -1471,8 +1468,7 @@
           </div>
         </div>
       </div>
-      <!-- BMW X1 sDrive 18i -->
-      <div class="car-card reveal" style="transition-delay:0.4s">
+      <div class="car-card reveal" style="transition-delay:0.24s">
         <div class="car-img-box">
           <img class="car-thumb" src="brand_assets/BMW X1.png" alt="BMW X1 sDrive 18i vendido">
           <div class="car-overlay"></div>
@@ -1491,8 +1487,7 @@
           </div>
         </div>
       </div>
-      <!-- SEAT León FR -->
-      <div class="car-card reveal" style="transition-delay:0.48s">
+      <div class="car-card reveal" style="transition-delay:0.32s">
         <div class="car-img-box">
           <img class="car-thumb" src="brand_assets/Seat.jpg" alt="SEAT León FR vendido">
           <div class="car-overlay"></div>
@@ -1511,8 +1506,7 @@
           </div>
         </div>
       </div>
-      <!-- Volkswagen Golf VII -->
-      <div class="car-card reveal" style="transition-delay:0.56s">
+      <div class="car-card reveal" style="transition-delay:0.40s">
         <div class="car-img-box">
           <img class="car-thumb" src="brand_assets/Ww.jpg" alt="Volkswagen Golf VII 2.0 TDI vendido" style="object-position: center 65%;">
           <div class="car-overlay"></div>
@@ -1531,6 +1525,8 @@
           </div>
         </div>
       </div>
+      </div>
+    </div>
     </div>
   </div>
 </section>
@@ -1636,7 +1632,7 @@
       <div class="proof-lbl">Coches Importados</div>
     </div>
     <div class="proof-cell">
-      <div class="proof-num">7</div>
+      <div class="proof-num">6</div>
       <div class="proof-lbl">Vendidos con Éxito</div>
     </div>
     <div class="proof-cell">
