@@ -589,10 +589,16 @@
 
     .catalog-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 48px; }
 
-                                                    .cars-grid { display: grid; gap: 16px; }
+                                                        .cars-grid { display: grid; gap: 16px; }
     .available-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
     .sold-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 16px; }
     .cars-grid > .car-card--available .car-img-box { height: 240px; }
+    @media (max-width: 900px) {
+      .available-grid, .sold-grid { grid-template-columns: repeat(2, 1fr) !important; }
+    }
+    @media (max-width: 580px) {
+      .available-grid, .sold-grid { grid-template-columns: 1fr !important; }
+    }
     @media (max-width: 900px) {
       .available-grid, .sold-grid { grid-template-columns: repeat(2, 1fr) !important; }
     }
@@ -1216,10 +1222,16 @@
       .step-connector { display: none; }
       .why-layout { grid-template-columns: 1fr; gap: 40px; }
       .why-left .big-ghost { font-size: 5rem; }
-                                                    .cars-grid { display: grid; gap: 16px; }
+                                                        .cars-grid { display: grid; gap: 16px; }
     .available-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
     .sold-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 16px; }
     .cars-grid > .car-card--available .car-img-box { height: 240px; }
+    @media (max-width: 900px) {
+      .available-grid, .sold-grid { grid-template-columns: repeat(2, 1fr) !important; }
+    }
+    @media (max-width: 580px) {
+      .available-grid, .sold-grid { grid-template-columns: 1fr !important; }
+    }
     @media (max-width: 900px) {
       .available-grid, .sold-grid { grid-template-columns: repeat(2, 1fr) !important; }
     }
@@ -1399,11 +1411,11 @@
     </div>
     <div class="hero-stats">
       <div>
-        <div class="stat-num">9</div>
+        <div class="stat-num">10</div>
         <div class="stat-lbl">Coches Importados</div>
       </div>
       <div>
-        <div class="stat-num">7</div>
+        <div class="stat-num">8</div>
         <div class="stat-lbl">Vendidos con Éxito</div>
       </div>
       <div>
@@ -1494,7 +1506,7 @@
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
     </div>
-                                                                <div class="cars-grid">
+                                                                    <div class="cars-grid">
       <div class="available-grid">
       <a class="car-card car-card--available reveal" href="https://wa.me/34614633696?text=Hola%20Victor%2C%20me%20interesa%20el%20BMW%20Serie%201%20116i%20(1.5%20gasolina%2C%20109CV%2C%202018)%20que%20ten%C3%A9is%20disponible.%20%C2%BFPodemos%20hablar%3F" target="_blank" rel="noopener">
         <div class="car-img-box">
@@ -1677,6 +1689,25 @@
           </div>
         </div>
       </div>
+      <div class="car-card reveal" style="transition-delay:0.56s">
+        <div class="car-img-box">
+          <img class="car-thumb" src="brand_assets/volkswagen-multivan.jpg" alt="Volkswagen Multivan vendido" style="object-position: center center;">
+          <div class="car-overlay"></div>
+          <div class="car-badge" style="background:var(--asphalt);color:var(--silver);border:1px solid rgba(141,153,174,0.3);">Vendido</div>
+        </div>
+        <div class="car-body" style="opacity:0.65;">
+          <div class="car-brand-badge">Volkswagen · Importado de Alemania</div>
+          <div class="car-name">Multivan</div>
+          <div class="car-specs">
+            <div class="spec"><span class="spec-v">2.0 TDI DSG</span><span class="spec-l">Motor</span></div>
+            <div class="spec"><span class="spec-v">2014</span><span class="spec-l">Año</span></div>
+            <div class="spec"><span class="spec-v">150.000 km</span><span class="spec-l">Kilometraje</span></div>
+          </div>
+          <div class="car-footer">
+            <span class="car-price" style="color:var(--silver);">Vendido</span>
+          </div>
+        </div>
+      </div>
       </div>
     </div>
     </div>
@@ -1780,11 +1811,11 @@
 <div id="proof">
   <div class="proof-inner">
     <div class="proof-cell">
-      <div class="proof-num">9</div>
+      <div class="proof-num">10</div>
       <div class="proof-lbl">Coches Importados</div>
     </div>
     <div class="proof-cell">
-      <div class="proof-num">7</div>
+      <div class="proof-num">8</div>
       <div class="proof-lbl">Vendidos con Éxito</div>
     </div>
     <div class="proof-cell">
