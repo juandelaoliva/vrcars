@@ -109,5 +109,17 @@
     "origin": "germany",
     "image": "brand_assets/Ww.jpg",
     "imagePosition": "center 65%"
+  },
+  {
+    "id": "volkswagen-multivan",
+    "brand": "Volkswagen",
+    "model": "Multivan",
+    "engine": "2.0 TDI DSG",
+    "year": "2014",
+    "km": "150.000 km",
+    "status": "sold",
+    "origin": "germany",
+    "image": "brand_assets/volkswagen-multivan.jpg",
+    "imagePosition": "center center"
   }
 ]
