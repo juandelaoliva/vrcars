@@ -5,7 +5,10 @@ const TELEGRAM_API = 'https://api.telegram.org/bot';
 // Se configura en Cloudflare con la variable ALLOWED_USER_IDS (IDs separados por comas,
 // ej: "2539761,987654321"), así que dar de alta a alguien no requiere tocar el código.
 // Si la variable no existe o no contiene ningún ID válido, se usa esta lista.
-const DEFAULT_ALLOWED_USER_IDS = [2539761];
+const DEFAULT_ALLOWED_USER_IDS = [
+  2539761,     // Juan
+  6417965972,  // Víctor
+];
 const GITHUB_OWNER = 'juandelaoliva';
 const GITHUB_REPO = 'vrcars';
 const GITHUB_BRANCH = 'main';
