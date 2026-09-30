@@ -121,5 +121,17 @@
     "origin": "germany",
     "image": "brand_assets/volkswagen-multivan.jpg",
     "imagePosition": "center center"
+  },
+  {
+    "id": "nissan-qashqai-1-3-digt",
+    "brand": "Nissan",
+    "model": "Qashqai 1.3 DIGT",
+    "engine": "1.3 DIGT 140cv",
+    "year": "2019",
+    "km": "65.000 km",
+    "status": "sold",
+    "origin": "germany",
+    "image": "brand_assets/nissan-qashqai-1-3-digt.jpg",
+    "imagePosition": "center bottom"
   }
 ]
