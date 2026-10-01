@@ -353,6 +353,7 @@ The bot also shows the equivalent percentage value after each button press (e.g.
 |---|---|
 | `TELEGRAM_TOKEN` | Bot token from BotFather |
 | `GITHUB_TOKEN` | Personal access token with `repo` + `workflow` scopes |
+| `ALLOWED_USER_IDS` | Comma-separated Telegram user IDs allowed to use the bot, e.g. `2539761,987654321` |
 
 **KV namespace:** bind a KV namespace to the variable name `KV` (not `VRCARS_BOT`) in the Worker settings.
 
@@ -362,7 +363,11 @@ The bot also shows the equivalent percentage value after each button press (e.g.
 curl "https://api.telegram.org/bot<TOKEN>/setWebhook?url=https://your-worker.workers.dev/"
 ```
 
-**Allowed user:** the bot only responds to the user ID set in `ALLOWED_USER_ID`. Find your ID by messaging `@userinfobot` on Telegram.
+**Allowed users:** the bot ignores anyone whose Telegram user ID is not in `ALLOWED_USER_IDS` — silently, with no reply, so an unauthorised person just sees a bot that never answers. Each person finds their own ID by messaging `@userinfobot` on Telegram.
+
+To grant or revoke access, edit the `ALLOWED_USER_IDS` variable in the Cloudflare Worker settings and save. No code change and no redeploy needed. If the variable is missing, empty, or contains no valid ID, the bot falls back to `DEFAULT_ALLOWED_USER_IDS` in `bot/worker.js` so a typo can never lock everyone out.
+
+Everyone on the list has the same powers: add, edit and delete any car. There is no read-only role, and deletions are immediate — the only way back is the file history on GitHub. Note that all of them publish through the same `GITHUB_TOKEN`, so every commit is authored by the token's owner regardless of who used the bot.
 
 **BotFather commands:**
 
@@ -408,8 +413,9 @@ Repository → Settings → Secrets and variables → Actions → New repository
 2. Workers & Pages → Create → Worker.
 3. Paste the contents of `bot/worker.js`.
 4. Add secrets: `TELEGRAM_TOKEN`, `GITHUB_TOKEN`.
-5. Create a KV namespace and bind it as `KV` in the Worker's settings.
-6. Deploy.
+5. Add the variable `ALLOWED_USER_IDS` with the Telegram user IDs allowed to use the bot, separated by commas.
+6. Create a KV namespace and bind it as `KV` in the Worker's settings.
+7. Deploy.
 
 ### 4. GitHub Personal Access Token
 
